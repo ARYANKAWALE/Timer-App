@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Stopwatch</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="stopwatch">
+            <div class="mode-switch">
+                <button class="theme-toggle" onclick="toggleTheme()">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <div class="timer-display">
+                <h1 id="displayTime">00:00:00.00</h1>
+                <div class="split-time" id="splitTime">Split: 00:00:00.00</div>
+            </div>
+            <div class="buttons">
+                <button onclick="watchstop()" id="pauseBtn" class="control-btn hidden">
+                    <i class="fas fa-pause"></i>
+                </button>
+                <button onclick="watchstart()" id="startBtn" class="control-btn">
+                    <i class="fas fa-play"></i>
+                </button>
+                <button onclick="watchReset()" class="control-btn">
+                    <i class="fas fa-rotate-left"></i>
+                </button>
+                <button onclick="addLap()" class="lap-btn">
+                    <i class="fas fa-flag"></i> LAP
+                </button>
+            </div>
+            <div class="laps-section">
+                <div class="laps-header">
+                    <span>Lap</span>
+                    <span>Split Time</span>
+                    <span>Lap Time</span>
+                </div>
+                <div id="laps" class="laps-container"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
